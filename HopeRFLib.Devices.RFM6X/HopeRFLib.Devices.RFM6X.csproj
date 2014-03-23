@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Tools\HopeRF\HopeRF_RFM65_69_69H\HopeRFLib.Devices.RFM6X.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FBF4ADDD-C6A4-462A-B8F9-51740D94720A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>HopeRFLib.Devices.RFM6X</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.4.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>SemtechLib.Devices.SX1231</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FTD2XX_NET">
+      <HintPath>..\FTD2XX_NET.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\ZedGraph.DLL</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SX1231.cs" />
+    <Compile Include="Events\LowBatTrimEventArg.cs" />
+    <Compile Include="Events\OokPeakThreshDecEventArg.cs" />
+    <Compile Include="Events\RfPaSwitchSelEventHandler.cs" />
+    <Compile Include="Events\DioMappingEventArg.cs" />
+    <Compile Include="Events\IntermediateModeEventHandler.cs" />
+    <Compile Include="Events\DataModeEventHandler.cs" />
+    <Compile Include="Events\PacketStatusEventArg.cs" />
+    <Compile Include="Events\DcFreeEventArg.cs" />
+    <Compile Include="Events\ModulationTypeEventArg.cs" />
+    <Compile Include="Events\OokAverageThreshFiltEventHandler.cs" />
+    <Compile Include="Events\ExitConditionEventHandler.cs" />
+    <Compile Include="Events\DataModeEventArg.cs" />
+    <Compile Include="Events\ClockOutEventArg.cs" />
+    <Compile Include="Events\OokPeakThreshDecEventHandler.cs" />
+    <Compile Include="Events\LowBatTrimEventHandler.cs" />
+    <Compile Include="Events\IntermediateModeEventArg.cs" />
+    <Compile Include="Events\ListenEndEventHandler.cs" />
+    <Compile Include="Events\EnterConditionEventArg.cs" />
+    <Compile Include="Events\LnaZinEventHandler.cs" />
+    <Compile Include="Events\ExitConditionEventArg.cs" />
+    <Compile Include="Events\ListenCriteriaEventHandler.cs" />
+    <Compile Include="Events\LimitCheckStatusEventHandler.cs" />
+    <Compile Include="Events\FifoFillConditionEventHandler.cs" />
+    <Compile Include="Events\RfPaSwitchSelEventArg.cs" />
+    <Compile Include="Events\ModulationTypeEventHandler.cs" />
+    <Compile Include="Events\ListenCriteriaEventArg.cs" />
+    <Compile Include="Events\PaRampEventArg.cs" />
+    <Compile Include="Events\AddressFilteringEventArg.cs" />
+    <Compile Include="Events\PacketFormatEventHandler.cs" />
+    <Compile Include="Events\PaModeEventArg.cs" />
+    <Compile Include="Events\AgcStepEventArg.cs" />
+    <Compile Include="Events\OokThreshTypeEventArg.cs" />
+    <Compile Include="Events\PaRampEventHandler.cs" />
+    <Compile Include="Events\PacketStatusEventHandler.cs" />
+    <Compile Include="Events\ListenResolEventHandler.cs" />
+    <Compile Include="Events\LimitCheckStatusEventArg.cs" />
+    <Compile Include="Events\DcFreeEventHandler.cs" />
+    <Compile Include="Events\LnaZinEventArg.cs" />
+    <Compile Include="Events\LnaGainEventHandler.cs" />
+    <Compile Include="Events\AgcStepEventHandler.cs" />
+    <Compile Include="Events\ListenEndEventArg.cs" />
+    <Compile Include="Events\PacketFormatEventArg.cs" />
+    <Compile Include="Events\PaModeEventHandler.cs" />
+    <Compile Include="Events\AddressFilteringEventHandler.cs" />
+    <Compile Include="Events\ListenResolEventArg.cs" />
+    <Compile Include="Events\LnaGainEventArg.cs" />
+    <Compile Include="Events\OokAverageThreshFiltEventArg.cs" />
+    <Compile Include="Events\FifoFillConditionEventArg.cs" />
+    <Compile Include="Events\OokThreshTypeEventHandler.cs" />
+    <Compile Include="Events\EnterConditionEventHandler.cs" />
+    <Compile Include="Events\DioMappingEventHandler.cs" />
+    <Compile Include="Events\ClockOutEventHandler.cs" />
+    <Compile Include="Enumerations\OokThreshTypeEnum.cs" />
+    <Compile Include="Enumerations\ListenCriteriaEnum.cs" />
+    <Compile Include="Enumerations\ListenEndEnum.cs" />
+    <Compile Include="Enumerations\LnaGainEnum.cs" />
+    <Compile Include="Enumerations\ClockOutEnum.cs" />
+    <Compile Include="Enumerations\LimitCheckStatusEnum.cs" />
+    <Compile Include="Enumerations\LowBatTrimEnum.cs" />
+    <Compile Include="Enumerations\FifoFillConditionEnum.cs" />
+    <Compile Include="Enumerations\PaRampEnum.cs" />
+    <Compile Include="Enumerations\OokAverageThreshFiltEnum.cs" />
+    <Compile Include="Enumerations\EnterConditionEnum.cs" />
+    <Compile Include="Enumerations\ListenResolEnum.cs" />
+    <Compile Include="Enumerations\ExitConditionEnum.cs" />
+    <Compile Include="Enumerations\DioMappingEnum.cs" />
+    <Compile Include="Enumerations\DcFreeEnum.cs" />
+    <Compile Include="Enumerations\RfPaSwitchSelEnum.cs" />
+    <Compile Include="Enumerations\AddressFilteringEnum.cs" />
+    <Compile Include="Enumerations\ModulationTypeEnum.cs" />
+    <Compile Include="Enumerations\LnaZinEnum.cs" />
+    <Compile Include="Enumerations\OokPeakThreshDecEnum.cs" />
+    <Compile Include="Enumerations\DataModeEnum.cs" />
+    <Compile Include="Enumerations\OokPeakThreshStepEnum.cs" />
+    <Compile Include="Enumerations\IntermediateModeEnum.cs" />
+    <Compile Include="Enumerations\PacketFormatEnum.cs" />
+    <Compile Include="Enumerations\OperatingModeEnum.cs" />
+    <Compile Include="Enumerations\PaModeEnum.cs" />
+    <Compile Include="Controls\RssiGraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RegisterTableControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TransmitterViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\IrqMapViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SpectrumGraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReceiverViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PacketHandlerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PayloadImg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CommonViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DeviceViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TemperatureViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\RxTxStartupTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PacketLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RssiAnalyserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegistersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SpectrumAnalyserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TemperatureCalibrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\Packet.cs" />
+    <Compile Include="General\DataLog.cs" />
+    <Compile Include="General\MaskValidationType.cs" />
+    <Compile Include="General\PacketLog.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\CommonViewControl.resx" />
+    <EmbeddedResource Include="Controls\DeviceViewControl.resx" />
+    <EmbeddedResource Include="Controls\IrqMapViewControl.resx" />
+    <EmbeddedResource Include="Controls\PacketHandlerView.resx" />
+    <EmbeddedResource Include="Controls\ReceiverViewControl.resx" />
+    <EmbeddedResource Include="Controls\RegisterTableControl.resx" />
+    <EmbeddedResource Include="Controls\RssiGraphControl.resx" />
+    <EmbeddedResource Include="Controls\SpectrumGraphControl.resx" />
+    <EmbeddedResource Include="Controls\TemperatureViewControl.resx" />
+    <EmbeddedResource Include="Controls\TransmitterViewControl.resx" />
+    <EmbeddedResource Include="Forms\PacketLogForm.resx" />
+    <EmbeddedResource Include="Forms\RegistersForm.resx" />
+    <EmbeddedResource Include="Forms\RssiAnalyserForm.resx" />
+    <EmbeddedResource Include="Forms\RxTxStartupTimeForm.resx" />
+    <EmbeddedResource Include="Forms\SpectrumAnalyserForm.resx" />
+    <EmbeddedResource Include="Forms\TemperatureCalibrationForm.resx" />
+    <EmbeddedResource Include="Forms\TestForm.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HopeRFLib\HopeRFLib.csproj">
+      <Project>{cb31e61c-c895-4324-aea6-85853abdcc19}</Project>
+      <Name>HopeRFLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
