@@ -2,3 +2,4 @@ RFM6X-TOOL
 ==========
 
 RFM65W/RFM69W/RFM69HW Register Settings
+RFM69W - SX1231
