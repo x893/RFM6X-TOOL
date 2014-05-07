@@ -689,7 +689,11 @@ namespace SX1231SKB
 			{
 				if (tsBtnOpenDevice.Text == "Connect")
 				{
-					if (!sx1231.Open("RFM6X-915") && !sx1231.Open("RFM6X") && !sx1231.Open("HOPERF USB bridge"))
+					if (!sx1231.Open("Dual RS232")
+					&& !sx1231.Open("RFM6X-915")
+					&& !sx1231.Open("RFM6X")
+					&& !sx1231.Open("HOPERF USB bridge")
+						)
 						throw new Exception("Unable to open RFM6X " + sx1231.DeviceName + " device");
 				}
 				else

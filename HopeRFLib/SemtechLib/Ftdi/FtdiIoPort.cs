@@ -53,16 +53,14 @@ namespace SemtechLib.Ftdi
 
 		private void OnOpened()
 		{
-			if (Opened == null)
-				return;
-			Opened((object)this, EventArgs.Empty);
+			if (Opened != null)
+				Opened(this, EventArgs.Empty);
 		}
 
 		private void OnClosed()
 		{
-			if (Closed == null)
-				return;
-			Closed((object)this, EventArgs.Empty);
+			if (Closed != null)
+				Closed(this, EventArgs.Empty);
 		}
 
 		private bool SearchDevice(string name)
@@ -77,7 +75,7 @@ namespace SemtechLib.Ftdi
 				{
 					for (uint index = 0U; index < devcount; ++index)
 					{
-						string str = ((object)deviceList[index].Description).ToString();
+						string str = deviceList[index].Description;
 						if (str.Length != 0 && name == str)
 						{
 							info.DeviceIndex = index;

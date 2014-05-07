@@ -58,9 +58,8 @@ namespace SemtechLib.Ftdi
 
 		private void OnOpened()
 		{
-			if (Opened == null)
-				return;
-			Opened((object)this, EventArgs.Empty);
+			if (Opened != null)
+				Opened(this, EventArgs.Empty);
 		}
 
 		private void OnClosed()
@@ -72,9 +71,8 @@ namespace SemtechLib.Ftdi
 
 		private void ports_Opened(object sender, EventArgs e)
 		{
-			if (!IsOpen)
-				return;
-			OnOpened();
+			if (IsOpen)
+				OnOpened();
 		}
 
 		private void ports_Closed(object sender, EventArgs e)
@@ -84,10 +82,12 @@ namespace SemtechLib.Ftdi
 
 		public bool Open(string name)
 		{
-			if (!portA.Open(name) || !portB.Open(name))
-				return false;
-			OnOpened();
-			return true;
+			if (portA.Open(name) && portB.Open(name))
+			{
+				OnOpened();
+				return true;
+			}
+			return false;
 		}
 
 		public bool Close()
